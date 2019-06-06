@@ -42,6 +42,10 @@ footer{
     background-color: lightskyblue;
 }
 
+div{
+    color: brown;
+}
+
 img{
     cursor:pointer;
     display: none;
@@ -62,12 +66,10 @@ img{
 @media(max-width:760px){
     body{
         grid-template-areas: 'navbar navbar navbar navbar'
-                             'header header header header'
-                             'section section section section'
-                             'aside aside aside aside'
+                             'header header section section'
+                             'aside aside div div'
                              'footer footer footer footer';
-    grid-template-rows: 20vh, 30vh, 60vh, 40vh;
-    grid-gap: 10px;
+        grid-template-rows: 20vh 70vh 70 vh 40vh;
     }
     nav a{
         display: none;
@@ -78,3 +80,14 @@ img{
     }
 }
 
+@media(max-width: 475px){
+    body{
+        grid-template-areas:'navbar navbar navbar navbar'
+                            'header header header header'
+                            'section section section section'
+                            'aside aside aside aside'
+                            'div div div div'
+                            'footer footer footer footer';
+        grid-auto-rows: 20vh 50vh 50vh 50vh 50vh 40vh;
+    }
+}
