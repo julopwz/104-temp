@@ -1,93 +1,114 @@
-
 body{
-    margin: 0%;
+    margin: 0;
     display: grid;
     grid-template-areas: 'navbar navbar navbar navbar'
-                         'header header header header'
-                         'section section aside aside'
+                         'header section aside div'
                          'footer footer footer footer';
-    grid-template-rows: 20vh, 30vh, 60vh, 40vh;
-}
-
-nav{
-    background-color: seagreen;
-    height: 50px;
+    grid-template-rows: 20vh 70vh 40vh;
+  }
+  
+  nav{
     grid-area: navbar;
+    background-color: yellow;
     display: flex;
     align-items: center;
     justify-content: space-around;
-}
-
-img{
+  }
+  
+  img{
     cursor: pointer;
-    display: none;
-}
-header{
+  }
+  
+  header{
     grid-area: header;
-    background-color: greenyellow;
-}
-
-section{
+    background-color: limegreen;
+  }
+  
+  section{
     grid-area: section;
-    background-color: aqua;
-}
-
-aside{
+    background-color: aquamarine;
+  }
+  
+  aside{
     grid-area: aside;
-    background-color: palevioletred;
-}
-
-footer{
+    background-color: orange;
+  }
+  
+  div{
+    grid-area: div;
+    background-color: tomato;
+  }
+  
+  footer{
     grid-area: footer;
-    background-color: lightskyblue;
-}
-
-div{
-    color: brown;
-}
-
-img{
-    cursor:pointer;
-    display: none;
-    width:32px;
-    height: 32px;
-
-}
-
-@media(max-width:768px){
-    nav a{
-        display: none;
-    }
-    nav img{
-        display: block;
-    }
-}
-
-@media(max-width:760px){
+    background-color: magenta;
+  }
+  
+  @media(max-width: 768px){
     body{
-        grid-template-areas: 'navbar navbar navbar navbar'
-                             'header header section section'
-                             'aside aside div div'
-                             'footer footer footer footer';
-        grid-template-rows: 20vh 70vh 70 vh 40vh;
+      grid-template-areas: 'navbar navbar navbar navbar'
+                           'header header section section'
+                           'aside aside div div'
+                           'footer footer footer footer';
+      grid-template-rows: 20vh 70vh 70vh 40vh;              
     }
     nav a{
-        display: none;
-    
+      display: none;
+      font-size: 16pt;
+      font-family: 'Ruge Boogie', cursive;
+      text-decoration: none;
     }
-    nav img{
-        display: block;
-    }
-}
 
-@media(max-width: 475px){
+  }
+
+  .meme{
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+      max-width: 90%;
+      border: 4px dashed magenta;
+      padding: 10px;
+  }
+
+  header, section, aside, div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  @media(max-width:425px){
     body{
-        grid-template-areas:'navbar navbar navbar navbar'
-                            'header header header header'
-                            'section section section section'
-                            'aside aside aside aside'
-                            'div div div div'
-                            'footer footer footer footer';
-        grid-auto-rows: 20vh 50vh 50vh 50vh 50vh 40vh;
+      grid-template-areas: 'navbar navbar navbar navbar'
+                           'header header header header'
+                           'section section section section'
+                           'aside aside aside aside'
+                           'div div div div'
+                           'footer footer footer footer';
+      grid-template-rows: 20vh 70vh 70vh 70vh 70vh 40vh;
     }
-}
+  }
+
+
+  footer{
+    grid-area: footer;
+    background-color: purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  footer div{
+    width: 300px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: purple;
+  }
+  
+  footer div a img{
+    width: 50px;
+  }
